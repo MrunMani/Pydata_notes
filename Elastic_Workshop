@@ -1,0 +1,92 @@
+Beats-push sys,less amt of cpu,  binary suited to ur machine...	
+Logstash
+
+xpack- is suit of plugins,basic authentication ,ml stuff,additional capabitlities.
+
+es can store time series data......
+es understands only json.
+
+if you want to do data modelling 
+
+es is nosql ,doesnt check anything with constrains;
+
+why is it popular
+-speed :data ->query -> elastic search ->fast
+-scalability
+-relevance :data queried we need to get relevant data,relevant search
+
+Terms:
+node := server ,stores data,
+Index: key -value  ,collection  of documents that have similar charachteristics
+type:deprecated....why jus check.now we jus have doc type now
+document : basic unit of info that can be indexed
+shard: Elastic search ,provide ability to subdivide your index into multiple chunks called shards,you need to worry jus abt deciding no of shards
+replica: fault tolerance ,copies of shards
+if only one node we maintain cluster state...green yellow red......
+
+
+
+Q))hadoop and elastic search mei diff?
+Hadoop has distributed filesystem which is designed for parallel data processing, while ElasticSearch is the search engine. Hadoop provides far more flexibility with a variety of tools, as compared to ES. Hadoop can store ample of data, whereas ES can't.
+q))can they work together?
+
+
+
+vim elastic.yml
+bin
+./elasticsearch
+browser : localhost:9200
+
+kibana:used for number crunching ,processing hoti kibana mei. port : 
+bins -> ./kibana
+browser : localhost:5601
+to know about indices : get /_cat/indices
+yellow green indices to know about them GET /_cat/indices?v similarly nodes?v health?v 
+discover -> check the index we r talking 
+Get metricbeat-6.3.2-2018.08.05/
+Delete fname
+putting data into es:
+	put /fname/_doc/1   //2 dala tobhi doc created as it is nosql
+{"colname" : "string1" }
+to search
+	get /fname/_search
+
+to view through ui:go to discover
+
+kibana holds only metadata , it should know details like where es running
+
+data goes to es first -> to let kibana know something has happened we have index pattern.
+
+
+geoquery->type of query in ES : search usecase
+
+* to query in kibana*
+get /fname/_search
+{
+	"query"{"match":{"col" :"value"}}
+
+metric beats :
+	
+
+govt :
+	social cops
+	rto
+	e-commerce
+	
+
+Graddle??
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
